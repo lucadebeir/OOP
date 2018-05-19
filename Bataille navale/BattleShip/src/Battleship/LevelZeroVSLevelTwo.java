@@ -5,15 +5,19 @@ import java.util.Random;
 
 public class LevelZeroVSLevelTwo {
 	
+	public static int cout1;
+	public static int cout2;
+
 	public static void main(String[] args) {
 		
-		int cout = 0;
-		int cout1 = 0;
-		int cout2 = 0;
+		//int cout = 0;
 		IA J1;
 		IA J2;
 		
-		while (cout != 100) {
+		cout1 = 0;
+		cout2 = 0;
+		
+		//while (cout != 100) {
 			
 			J1 = initIALevelZero("IALevelTwo");
 			J2 = initIALevelTwo("IALevelZero");
@@ -30,7 +34,7 @@ public class LevelZeroVSLevelTwo {
 			boolean res = false;
 			boolean tour = false;
 			
-			cout++;
+			//cout++;
 
 			while (res == false) {
 				coord = new Coordinate(null,false);
@@ -108,30 +112,30 @@ public class LevelZeroVSLevelTwo {
 					}
 				}
 				
-			}
+			//}
 				
 			if (J1.getScoreJoueur() == 17) {
 				System.out.println(J1.getNomJoueur() + " a gagné !");
 				System.out.println(" ");
 				System.out.println(J1.getListTouched());
 				System.out.println(" ");
-				cout1++;
+				cout1 = 1;
 			}
 			if (J2.getScoreJoueur() == 17){
 				System.out.println(J2.getNomJoueur() + " a gagné !");
 				System.out.println(" ");
 				System.out.println(J2.getListTouched());
 				System.out.println(" ");
-				cout2++;
+				cout2 = 1;
 			}
 		}
-		System.out.println(cout1);
-		System.out.println(cout2);
-		if (cout1 < cout2) {
-			System.out.println("Le level Two de l'IA bat le level Zero !");
-		} else {
-			System.out.println("Le level Zero de l'IA bat le level Two !");
-		}
+		//System.out.println(cout1);
+		//System.out.println(cout2);
+		//if (cout1 < cout2) {
+			//System.out.println(J2.getNomJoueur() + " bat " + J1.getNomJoueur() + "  !");
+		//} else {
+			//System.out.println(J1.getNomJoueur() + " bat " + J2.getNomJoueur() + "  !");
+		//}
 	}
 	
 	public static IALevelZero initIALevelZero(String nomJoueur) {
